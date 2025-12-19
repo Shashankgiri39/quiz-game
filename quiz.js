@@ -20,6 +20,21 @@ const quiz = [
     question: "When did Salt Satyagraha take place?",
     options: ["1935", "1930", "1940", "1942"],
     answer: 2
+  },
+  {
+    question: "Which company developed JavaScript?",
+    options: ["Microsoft", "Netscape", "Google", "Oracle"],
+    answer: 2
+  },
+  {
+    question: "Who wrote the Indian national anthem?",
+    options: ["Bankim Chandra Chatarji", "Lal Bahadur Sastri", "Rabindranath Taigore", "Lala Lajpat Ray"],
+    answer: 3
+  },
+  {
+    question:"Who invented the telephone?",
+    options: ["Edison", "Alexander Graham Bell", "Charls Babbage", "Charles Barkley"],
+    answer: 2
   }
 ];
 
@@ -103,3 +118,4 @@ replayBtn.onclick = () => {
 showQuestion();
 
 });
+
