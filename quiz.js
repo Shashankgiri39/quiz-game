@@ -114,6 +114,8 @@ replayBtn.onclick = () => {
     currentQuestion = 0;
     score = 0;
     attempts++;
+    document.getElementById("attempts").textContent =
+    `Attempt: ${attempts}`;
     resultDiv.style.display = "none";
     document.getElementById("quiz-container").style.display = "block";
     showQuestion();
@@ -122,5 +124,6 @@ replayBtn.onclick = () => {
 showQuestion();
 
 });
+
 
 
