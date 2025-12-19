@@ -40,6 +40,7 @@ const quiz = [
 
 let currentQuestion = 0;
 let score = 0;
+let attempts = 1;
 
 const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
@@ -105,11 +106,14 @@ function showResult() {
                 percentage >= 50 ? "B" : "C";
 
     gradeEl.textContent = `Grade: ${grade}`;
+  document.getElementById("attempts").textContent =
+  `Attempt: ${attempts}`;
 }
 
 replayBtn.onclick = () => {
     currentQuestion = 0;
     score = 0;
+    attempts++;
     resultDiv.style.display = "none";
     document.getElementById("quiz-container").style.display = "block";
     showQuestion();
@@ -118,4 +122,5 @@ replayBtn.onclick = () => {
 showQuestion();
 
 });
+
 
