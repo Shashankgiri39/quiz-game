@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Quiz Game</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+.quiz-box {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+#progress {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+#question {
+    font-size: 17px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 2px solid #ddd;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.3s;
+}
+
+.option-btn:active {
+    transform: scale(0.97);
+}
+
+.option-btn.correct {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+.option-btn.wrong {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+#next-btn,
+#replay-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 12px;
+    font-size: 16px;
+    background: #667eea;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#next-btn:active,
+#replay-btn:active {
+    transform: scale(0.97);
+}
+
+#result {
+    text-align: center;
+}
+
+#score,
+#percentage,
+#grade {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="quiz-box">
+
+<h1>Quiz Game</h1>
+
+<div id="quiz-container">
+    <div id="progress"></div>
+    <p id="question"></p>
+    <div id="options"></div>
+    <button id="next-btn" style="display:none;">Next</button>
+</div>
+
+<div id="result" style="display:none;">
+    <h2>Quiz Finished 🎉</h2>
+    <p id="score"></p>
+    <p id="percentage"></p>
+    <p id="grade"></p>
+    <button id="replay-btn">Play Again</button>
+</div>
+
+</div>
+
+<script src="quiz.js"></script>
+</body>
+</html>
